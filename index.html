@@ -6,11 +6,29 @@
     <title>Simple Calculator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-</head
-<body>
+ @layer utilities {
+        .btn {
+          @apply h-16 w-full rounded-xl font-semibold text-xl transition-all duration-200 flex items-center justify-center cursor-pointer shadow-sm border border-transparent;
+        }
+
+        .number-btn {
+          @apply bg-gray-50 text-gray-800 hover:bg-gray-100 active:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 dark:border-gray-600;
+        }
+
+        .operation-btn {
+          @apply bg-indigo-50 text-indigo-600 hover:bg-indigo-100 active:bg-indigo-200 dark:bg-gray-800 dark:text-indigo-400 dark:hover:bg-gray-700 dark:border-gray-700;
+        }
+
+        .action-btn {
+          @apply bg-gray-100 text-gray-600 hover:bg-gray-200 active:bg-gray-300 dark:bg-gray-600 dark:text-gray-300 dark:hover:bg-gray-500 dark:border-gray-500;
+        }
+
+        .equals-btn {
+          @apply bg-indigo-600 text-white hover:bg-indigo-700 active:bg-indigo-800 shadow-lg shadow-indigo-200 dark:shadow-none dark:bg-indigo-600 dark:hover:bg-indigo-500;
+        }
+      }
+    </style>
+  </head>
     
 </body>
 </html>
