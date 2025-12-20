@@ -18,3 +18,25 @@ function resetDisplay() {
   display.value = "0";
   preview.textContent = "";
 }
+
+document.querySelectorAll(".btn").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    const value = this.value;
+
+    if (value === "C") {
+      handleClear();
+    } else if (value === "%") {
+      handlePercentage();
+    } else if (value === "Back") {
+      handleBackspace();
+    } else if (value === "=") {
+      handleEquals();
+    } else if (["+", "-", "*", "/"].includes(value)) {
+      handleOperator(value);
+    } else if (!isNaN(value)) {
+      handleNumber(value);
+    } else if (value === ".") {
+      handleDecimal();
+    }
+  });
+});
